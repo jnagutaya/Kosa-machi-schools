@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共同テスト対策問題</title>
+    <style>
+        .question-box {
+            display: grid;
+            grid-template-columns: 30px 1fr 1fr;
+            border-bottom: solid;
+            border-bottom-color: lightgray;
+        }
+
+        .question-box:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>過去問・類似問題</h1>
+    <h2>A　次の英文の（　）内の語を、適する形に直しなさい。</h2>
+
+    <div class="question-box">
+        <p>①</p>
+        <p>
+            There are many<strong>（ story ）</strong>in this book.
+        </p>
+        <input class="ans1" type="text" placeholder="Answer" style="margin: 10px">
+    </div>
+    <p class="remarks1" style="font-weight: bold;"></p>
+
+    <div class="question-box">
+        <p>②</p>
+        <p>
+            Tsuyoshi<strong>（ study ）</strong>science every day.
+        </p>
+        <input class="ans2" type="text" placeholder="Answer" style="margin: 10px">
+    </div>
+    <p class="remarks2" style="font-weight: bold;"></p>
+
+    <div class="question-box">
+        <p>③</p>
+        <p>
+            This dog is<strong>（ big ）</strong>than that one.
+        </p>
+        <input class="ans3" type="text" placeholder="Answer" style="margin: 10px">
+    </div>
+    <p class="remarks3" style="font-weight: bold;"></p>
+    <button onclick="
+        let score = 0;
+
+        const answer1 = document.querySelector('.ans1').value;
+        if (answer1 === 'stories') {
+            document.querySelector('.remarks1')
+                .innerHTML = 'Your answer is correct.';
+            score += 1;
+        } else {
+            document.querySelector('.remarks1')
+                .innerHTML = 'Your answer is incorrect. Please try again.';
+        };
+
+        const answer2 = document.querySelector('.ans2').value;
+        if (answer2 === 'studies') {
+            document.querySelector('.remarks2')
+                .innerHTML = 'Your answer is correct.';
+            score += 1;
+        } else {
+            document.querySelector('.remarks2')
+                .innerHTML = 'Your answer is incorrect. Please try again.';
+        };
+
+        const answer3 = document.querySelector('.ans3').value;
+        if (answer3 === 'bigger') {
+            document.querySelector('.remarks3')
+                .innerHTML = 'Your answer is correct.';
+            score += 1;
+        } else {
+            document.querySelector('.remarks3')
+                .innerHTML = 'Your answer is incorrect. Please try again.';
+        };
+
+        document.querySelector('.total')
+            .innerHTML = `Your score is ${score}/3.`;
+    ">Submit answers</button>
+
+    <p class="total"></p>
+
+</body>
+</html>
