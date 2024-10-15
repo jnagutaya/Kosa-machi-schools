@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Board</title>
+  <style>
+    body {
+      font-family: 'Arial';
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Community Board for ES in Kosa Town</h1>
-  
-  <h2>Kahoot</h2>
-  <div>
-    <button onclick="url1()">Locations</button>
-    <button onclick="url2()">Directions</button>
-  </div>
+  <h1>Community Board in Kosa Town</h1>
 
-  <h2>Others</h2>
-  <div>
-    <button onclick="url3()">About Today</button>
-    <button onclick="url4()">Lottery</button>
-    <button onclick="url5()">ABC Race</button>
-  </div>
+  <h2 style="color: green">General</h2>
+  <button onclick="url3()">About Today</button>
+  <button onclick="url4()">Lottery</button>
+  
+  <h2 style="color: blue">Elementary Schools (Shirahata, Tatsuno, Otome & Kosa)</h2>
+    <h3>Kahoot</h3>
+    <div>
+      <button onclick="url1()">Locations</button>
+      <button onclick="url2()">Directions</button>
+    </div>
+
+    <h3>Others</h3>
+    <div>
+      <button onclick="url5()">ABC Race</button>
+    </div>
+
+  <h2 style="color: red">Kosa Junior High School</h2>
+    <h3>Kahoot</h3>
+      <button onclick="url6()">名詞＋現在分詞＋語句</button>
+      <button onclick="url7()">名詞＋過去分詞＋語句</button>
 
   <script>
     function url1(){
@@ -41,6 +52,14 @@
 
     function url5(){
       window.open('https://altivities.earthiverse.ca/abcrace/', '_blank');
+    }
+
+    function url6(){
+      window.open('https://create.kahoot.it/details/34f32fa3-ecd5-4d0a-ab9a-20df988e7cc7', '_blank');
+    }
+
+    function url7(){
+      window.open('https://create.kahoot.it/details/ad6b139c-5275-4542-aa6b-4ec11ae15663', '_blank');
     }
   </script>
 </body>
